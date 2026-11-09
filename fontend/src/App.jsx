@@ -26,6 +26,7 @@ import Chat from './pages/patient/Chat.jsx'
 import TtsTest from './pages/patient/TtsTest.jsx'
 import LsvtLoudTest from './pages/patient/LsvtLoudTest.jsx'
 import GamesHub from './pages/patient/GamesHub.jsx'
+import GameFruit from './pages/patient/GameFruit.jsx'
 import GameRunner from './pages/patient/GameRunner.jsx'
 
 // Therapist pages
@@ -102,6 +103,7 @@ export default function App() {
       <Route path="/training/big/session" element={<RequireAuth role="patient"><KeyedBigSession /></RequireAuth>} />
       <Route path="/training/big/session-weightshift" element={<RequireAuth role="patient"><SessionWeightShift /></RequireAuth>} />
       <Route path="/training/loud/session" element={<RequireAuth role="patient"><KeyedLoudSession /></RequireAuth>} />
+      <Route path="/games/fruit" element={<RequireAuth role="patient"><GameFruit /></RequireAuth>} />
       <Route path="/games/runner" element={<RequireAuth role="patient"><GameRunner /></RequireAuth>} />
       <Route path="/emergency-alert" element={<RequireAuth role="patient"><EmergencyAlert /></RequireAuth>} />
 

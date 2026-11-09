@@ -3,6 +3,16 @@ import { useSessionHistory } from '../lib/useSessionHistory.js'
 
 export const GAMES = [
   {
+    id: 'fruit',
+    to: '/games/fruit',
+    emoji: '🍉🔪',
+    title: 'เกมฟันผลไม้',
+    tags: ['LSVT BIG', 'LSVT LOUD'],
+    desc: 'ผลไม้จะโผล่ที่ขอบจอ กางแขนเอื้อมไปให้สุด แล้วพูด "อา" ดังๆ เพื่อฟัน',
+    meta: '60 วินาที · ใช้กล้อง + ไมค์',
+    bg: '#FDE8E4', accent: '#E8554D', dark: '#7A241F', shadow: '#B33630',
+  },
+  {
     id: 'runner',
     to: '/games/runner',
     emoji: '🏃‍♂️🚧',
