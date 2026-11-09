@@ -69,7 +69,7 @@ export default function Dashboard() {
                 <tr key={r.id} className="border-t border-line">
                   <td className="px-5 py-3 text-[13.5px]">{r.date}</td>
                   <td className="px-5 py-3">
-                    <Badge tone={r.type}>{r.type === 'big' ? 'LSVT BIG' : 'LSVT LOUD'}</Badge>
+                    <Badge tone={r.type}>{r.game === 'fruit' ? 'เกมฟันผลไม้' : r.game === 'runner' ? 'เกมวิ่งหลบ' : r.type === 'big' ? 'LSVT BIG' : 'LSVT LOUD'}</Badge>
                   </td>
                   <td className="px-5 py-3 text-[13.5px]">{r.duration}</td>
                 </tr>

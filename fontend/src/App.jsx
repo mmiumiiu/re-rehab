@@ -25,6 +25,8 @@ import EmergencyAlert from './pages/patient/EmergencyAlert.jsx'
 import Chat from './pages/patient/Chat.jsx'
 import TtsTest from './pages/patient/TtsTest.jsx'
 import LsvtLoudTest from './pages/patient/LsvtLoudTest.jsx'
+import GamesHub from './pages/patient/GamesHub.jsx'
+import GameRunner from './pages/patient/GameRunner.jsx'
 
 // Therapist pages
 import TherapistLogin from './pages/therapist/TherapistLogin.jsx'
@@ -59,7 +61,7 @@ export default function App() {
 
   // Overall zoom, bumped up ~half a step for readability.
   useEffect(() => {
-    document.body.style.zoom = pathname.startsWith('/therapist') ? '1.3' : '1.4'
+    document.body.style.zoom = pathname.startsWith('/games/') ? '1' : pathname.startsWith('/therapist') ? '1.3' : '1.4'
   }, [pathname])
 
   return (
@@ -86,6 +88,7 @@ export default function App() {
         }
       >
         <Route path="/home" element={<Home />} />
+        <Route path="/games" element={<GamesHub />} />
         <Route path="/training/big" element={<TrainingBig />} />
         <Route path="/training/loud" element={<TrainingLoud />} />
         <Route path="/dashboard" element={<Dashboard />} />
@@ -99,6 +102,7 @@ export default function App() {
       <Route path="/training/big/session" element={<RequireAuth role="patient"><KeyedBigSession /></RequireAuth>} />
       <Route path="/training/big/session-weightshift" element={<RequireAuth role="patient"><SessionWeightShift /></RequireAuth>} />
       <Route path="/training/loud/session" element={<RequireAuth role="patient"><KeyedLoudSession /></RequireAuth>} />
+      <Route path="/games/runner" element={<RequireAuth role="patient"><GameRunner /></RequireAuth>} />
       <Route path="/emergency-alert" element={<RequireAuth role="patient"><EmergencyAlert /></RequireAuth>} />
 
       {/* Therapist portal */}

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
-import { Home, Activity, Chart, User, Chat } from './icons.jsx'
+import { Home, Gamepad, Chart, User, Chat } from './icons.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 
 // Colorful nav — one hue per item (indigo / green / blue / red / pink)
 const NAV = [
   { to: '/home', label: 'หน้าแรก', icon: Home, color: '#5B50E0', tint: '#EFEBFE' },
-  { to: '/training/big', label: 'ฝึกกายภาพ', icon: Activity, match: '/training', color: '#2FA65A', tint: '#E3F6E9' },
+  { to: '/games', label: 'เกมฝึก', icon: Gamepad, match: '/games', color: '#2FA65A', tint: '#E3F6E9' },
   { to: '/dashboard', label: 'สรุปผล', icon: Chart, color: '#3D87E8', tint: '#E7F0FE' },
   { to: '/chat', label: 'แชท', icon: Chat, color: '#E8554D', tint: '#FDE8E4' },
   { to: '/profile', label: 'โปรไฟล์', icon: User, match: '/profile', color: '#D9538F', tint: '#FBE7F1' },
